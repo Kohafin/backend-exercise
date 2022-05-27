@@ -86,9 +86,6 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    debase (2.3.5)
-      debase-ruby_core_source (~> 0.10.14)
-    debase-ruby_core_source (0.10.16)
     diff-lcs (1.5.0)
     digest (3.1.0)
     docile (1.4.0)
@@ -117,7 +114,7 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.4)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httparty (0.20.0)
@@ -150,7 +147,7 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.15.0)
-    msgpack (1.5.1)
+    msgpack (1.5.2)
     multi_xml (0.6.0)
     net-imap (0.2.3)
       digest
@@ -167,7 +164,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.6-x86_64-darwin)
+    nokogiri (1.13.6-arm64-darwin)
       racc (~> 1.4)
     open_api-schema_validator (0.2.0)
       json-schema
@@ -252,13 +249,13 @@ GEM
     rswag-ui (2.5.1)
       actionpack (>= 3.1, < 7.1)
       railties (>= 3.1, < 7.1)
-    rubocop (1.29.1)
+    rubocop (1.30.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.17.0, < 2.0)
+      rubocop-ast (>= 1.18.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.18.0)
@@ -281,12 +278,12 @@ GEM
     spring (3.0.0)
     strscan (3.0.3)
     thor (1.2.1)
-    timeout (0.2.0)
+    timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.1)
+    unf_ext (0.0.8.2)
     unicode-display_width (2.1.0)
     webmock (3.14.0)
       addressable (>= 2.8.0)
@@ -298,8 +295,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  x86_64-darwin-20
-  x86_64-darwin-21
+  arm64-darwin-21
 
 DEPENDENCIES
   actionpack (>= 6.1.4.2)
@@ -308,7 +304,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   brakeman
   byebug
-  debase
   elastic-apm
   factory_bot_rails
   faker
@@ -340,4 +335,4 @@ RUBY VERSION
    ruby 3.1.1p18
 
 BUNDLED WITH
-   2.3.12
+   2.3.14

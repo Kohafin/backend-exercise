@@ -40,7 +40,7 @@ end
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'debase'
+  # gem 'debase'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'jwt'
