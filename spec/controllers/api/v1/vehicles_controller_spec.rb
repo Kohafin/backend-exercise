@@ -106,7 +106,7 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
       it 'allows view of vehicle in any fleet' do
         id = create(:vehicle).id
 
-        get :show, params: { id: id }
+        get :show, params: { id: }
 
         expect(response.parsed_body['id']).to eq(id)
       end
@@ -154,7 +154,7 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
       it 'allows view of vehicle in any fleet' do
         id = create(:vehicle).id
 
-        get :show, params: { id: id }
+        get :show, params: { id: }
 
         expect(response.parsed_body['id']).to eq(id)
       end
