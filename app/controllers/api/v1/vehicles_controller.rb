@@ -7,7 +7,9 @@ module Api
       before_action -> { any_fleet_is_permitted!(resource.fleet_id) }, only: %i[show update destroy]
       before_action -> { raise ActionController::ParameterMissing, :fleet_id if params[:fleet_id].blank? },
                     only: %i[bulk_update create status_count]
-      before_action -> { any_fleet_is_permitted!(params[:fleet_id]) if params[:fleet_id] }, only: %i[index create]
+      before_action lambda {
+                      any_fleet_is_permitted!(params[:fleet_id]) if params[:fleet_id]
+                    }, only: %i[index create update]
 
       def index
         vehicles     = fleet_context_scoped_model

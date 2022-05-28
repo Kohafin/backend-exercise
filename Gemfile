@@ -47,6 +47,9 @@ group :development, :test do
   gem 'open_api-schema_validator'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-readline'
   gem 'rubocop', '~> 1.5', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rake', require: false

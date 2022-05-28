@@ -40,6 +40,15 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
       expect(response.parsed_body.pluck('id')).to eq([unfiltered.id])
     end
 
+    it 'filters vehicles by vin' do
+      create(:vehicle, fleet_id: permitted_fleet_ids.first)
+      test_vehicle = create(:vehicle, fleet_id: permitted_fleet_ids.first)
+
+      get :index, params: { fleet_id: permitted_fleet_ids.first, vins: [test_vehicle.vin] }
+
+      expect(response.parsed_body.pluck('id')).to eq([test_vehicle.id])
+    end
+
     it 'filters vehicles by permitted_fleet_ids' do
       unpermitted_vehicle
       v1 = permitted_vehicle
@@ -97,7 +106,7 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
       it 'allows view of vehicle in any fleet' do
         id = create(:vehicle).id
 
-        get :show, params: { id: id }
+        get :show, params: { id: }
 
         expect(response.parsed_body['id']).to eq(id)
       end
@@ -145,7 +154,7 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
       it 'allows view of vehicle in any fleet' do
         id = create(:vehicle).id
 
-        get :show, params: { id: id }
+        get :show, params: { id: }
 
         expect(response.parsed_body['id']).to eq(id)
       end
