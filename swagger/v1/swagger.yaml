@@ -72,6 +72,18 @@ components:
       - fleet_id
       - make
       - model
+    fleet:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        updated_at:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
     example:
       type: object
       properties:

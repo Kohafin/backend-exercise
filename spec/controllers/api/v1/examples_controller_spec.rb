@@ -13,7 +13,7 @@ RSpec.describe Api::V1::ExamplesController, type: :controller do
 
   describe 'generic authorizations' do
     %i[index show create update destroy].each do |action|
-      include_examples 'permissions', :example, action
+      include_examples 'vehicle_permissions', :example, action
     end
   end
 
