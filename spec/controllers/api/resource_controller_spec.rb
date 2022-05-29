@@ -37,7 +37,7 @@ RSpec.describe Api::ResourceController, type: :controller do
     it 'renders resource' do
       id = rand(65)
 
-      get :show, params: { id: id }
+      get :show, params: { id: }
 
       expect(response.parsed_body).to eq(Resource::RECORDS[id].dup)
     end
@@ -77,7 +77,7 @@ RSpec.describe Api::ResourceController, type: :controller do
     it 'updates resource' do
       id = rand(65)
 
-      put :update, params: { id: id, resource: { name: 'updated name' } }
+      put :update, params: { id:, resource: { name: 'updated name' } }
 
       expect(response.parsed_body).to eq({ 'id' => id, 'name' => 'updated name' })
     end
@@ -99,7 +99,7 @@ RSpec.describe Api::ResourceController, type: :controller do
     it 'destroys resource' do
       id = rand(65)
 
-      delete :destroy, params: { id: id }
+      delete :destroy, params: { id: }
 
       expect(response.parsed_body).to eq(Resource::RECORDS[id])
     end

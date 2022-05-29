@@ -43,13 +43,13 @@ group :development, :test do
   # gem 'debase'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'jwt'
-  gem 'open_api-schema_validator'
-  gem 'rspec_junit_formatter'
-  gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'jwt'
+  gem 'open_api-schema_validator'
   gem 'rb-readline'
+  gem 'rspec_junit_formatter'
+  gem 'rspec-rails'
   gem 'rubocop', '~> 1.5', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rake', require: false

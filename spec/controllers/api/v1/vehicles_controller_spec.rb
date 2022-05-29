@@ -14,7 +14,7 @@ RSpec.describe Api::V1::VehiclesController, type: :controller do
 
   describe 'generic authorizations' do
     %i[show create update destroy].each do |action|
-      include_examples 'permissions', :vehicle, action
+      include_examples 'vehicle_permissions', :vehicle, action
     end
   end
 
