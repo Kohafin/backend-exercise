@@ -18,7 +18,6 @@ RSpec.describe Api::V1::FleetsController, type: :controller, focus: true do
     end
   end
 
-
   describe '#index' do
     authorize_user(:fleet, :index)
 

@@ -4,7 +4,6 @@ require 'swagger_helper'
 
 schema = load_schema(:vehicle)
 
-# rubocop:disable Rspec/EmptyExampleGroup
 RSpec.describe 'Vehicle SWAGGER', type: :request, resource: :vehicle, schema: schema do
   origin_let
   let(:permitted_fleet_ids) { [SecureRandom.uuid, SecureRandom.uuid] }
@@ -27,4 +26,3 @@ RSpec.describe 'Vehicle SWAGGER', type: :request, resource: :vehicle, schema: sc
     test_destroy
   end
 end
-# rubocop:enable Rspec/EmptyExampleGroup
